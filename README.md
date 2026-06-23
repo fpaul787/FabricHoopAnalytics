@@ -1,1 +1,2 @@
-"# Fabric Hoop Analytics" 
+# Fabric Hoop Analytics
+An end-to-end NBA analytics platform in Microsoft Fabric using a Medallion Architecture. Raw NBA game, team, player, and statistics data stored as parquet files will be ingested into a Lakehouse Bronze layer, transformed and standardized in a Silver layer, and modeled into a Gold layer using a star schema optimized for analytics.

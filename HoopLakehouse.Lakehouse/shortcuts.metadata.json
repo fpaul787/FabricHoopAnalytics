@@ -1,0 +1,14 @@
+[
+  {
+    "name": "hoopr-nba-storage",
+    "path": "/Files",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "c66b31e8-b725-429e-a93a-747b59ff52b0",
+        "location": "https://fabricdatastoragefp787.dfs.core.windows.net",
+        "subpath": "/hoopr-nba-storage"
+      }
+    }
+  }
+]

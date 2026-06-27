@@ -111,8 +111,8 @@ print("Null counts after cast:", null_counts)
 
 df = (
     df
-    .withColumn("date",       F.to_timestamp(F.col("date"),       "yyyy-MM-dd'T'HH:mm'Z'"))
-    .withColumn("start_date", F.to_timestamp(F.col("start_date"), "yyyy-MM-dd'T'HH:mm'Z'"))
+    .withColumn("date",       F.to_timestamp(F.col("date"),       "yyyy-MM-dd'T'HH:mmX"))
+    .withColumn("start_date", F.to_timestamp(F.col("start_date"), "yyyy-MM-dd'T'HH:mmX"))
 )
 
 # Verify parse success

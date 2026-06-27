@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "silver_bronze_player_box"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8da14428-e199-96ad-4204-410877ebd997"
+  }
+}

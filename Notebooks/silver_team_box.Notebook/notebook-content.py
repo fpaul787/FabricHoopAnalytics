@@ -314,7 +314,7 @@ print(f"Final row count: {df.count():,}")
     df.write
       .format("delta")
       .mode("overwrite")
-      .option("overwriteSchema", "true")
+      .option("mergeSchema", "true")
       .partitionBy("season", "season_type")
       .saveAsTable("HoopLakehouse.hoop_data.silver_team_box")
 )

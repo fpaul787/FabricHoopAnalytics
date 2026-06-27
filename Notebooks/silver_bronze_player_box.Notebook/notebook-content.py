@@ -192,8 +192,9 @@ df = df.withColumn(
 
 (
     df.write
+      .format("delta")
       .mode("overwrite")
-      .option("mergeSchema", "true")
+      .option("overwriteSchema", "true")
       .format("delta")
       .saveAsTable("hoop_data.silver_player_box")
 )

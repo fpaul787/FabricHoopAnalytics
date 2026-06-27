@@ -59,10 +59,10 @@ schedules_df.write \
 # CELL ********************
 
 # Read data
-player_box_df = spark.read.parquet("Files/hoopr-nba-storage/team_box/parquet/*")
+team_box_df = spark.read.parquet("Files/hoopr-nba-storage/team_box/parquet/*")
 
 # Write to bronze
-player_box_df.write \
+team_box_df.write \
     .format("delta") \
     .mode("overwrite") \
     .saveAsTable("hoop_data.bronze_team_box")

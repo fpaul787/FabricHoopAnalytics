@@ -86,7 +86,11 @@ double_to_int_cols = [
 for col in double_to_int_cols:
     df = df.withColumn(col, F.col(col).cast(IntegerType()))
 
-null_counts = {c: df.filter(F.col(c).isNull()).count() for c in double_to_int_cols}
+null_counts = (
+    df.agg(*[F.sum(F.col(c).isNull().cast("int")).alias(c) for c in double_to_int_cols])
+      .collect()[0]
+      .asDict()
+)
 print("Null counts after cast:", null_counts)
 
 # METADATA ********************

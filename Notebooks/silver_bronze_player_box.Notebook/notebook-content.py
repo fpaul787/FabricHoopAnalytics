@@ -195,8 +195,7 @@ df = df.withColumn(
       .format("delta")
       .mode("overwrite")
       .option("overwriteSchema", "true")
-      .format("delta")
-      .saveAsTable("hoop_data.silver_player_box")
+      .saveAsTable("HoopLakehouse.hoop_data.silver_player_box")
 )
 
 # METADATA ********************

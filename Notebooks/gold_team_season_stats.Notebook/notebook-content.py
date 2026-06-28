@@ -177,7 +177,7 @@ display(gold_df.orderBy(F.desc("win_pct"), F.desc("points_per_game")))
 
 gold_df.write.format("delta") \
     .mode("overwrite") \
-    .saveAsTable("hoop_data.gold_team_season_stats")
+    .saveAsTable("HoopLakehouse.hoop_data.gold_team_season_stats")
 
 # METADATA ********************
 

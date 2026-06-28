@@ -41,7 +41,7 @@ from pyspark.sql import functions as F
 
 # CELL ********************
 
-team_df = spark.table("hoop_data.silver_team_box")
+team_df = spark.table("HoopLakehouse.hoop_data.silver_team_box")
 
 # METADATA ********************
 

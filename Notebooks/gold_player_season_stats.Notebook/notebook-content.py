@@ -41,7 +41,7 @@ from pyspark.sql import functions as F
 # CELL ********************
 
 player_df = (
-    spark.table("hoop_data.silver_player_box")
+    spark.table("HoopLakehouse.hoop_data.silver_player_box")
          .filter(~F.col("did_not_play"))
 )
 

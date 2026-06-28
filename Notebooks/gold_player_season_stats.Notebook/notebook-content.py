@@ -26,8 +26,7 @@
 # 
 # Creates an analytics-ready player season table from `hoop_data.silver_player_box`.
 # 
-# **Grain:** One row per player per season.
-
+# **Grain:** One row per player per team per season.
 # CELL ********************
 
 from pyspark.sql import functions as F

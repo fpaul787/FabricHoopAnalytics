@@ -106,9 +106,8 @@ gold_df = (
         F.avg("fouls").alias("fouls_per_game"),
         F.avg("minutes").alias("minutes_per_game"),
 
-        F.avg(F.when(F.col("home_away")=="home",F.col("points"))).alias("home_ppg"),
-        F.avg(F.when(F.col("home_away")=="away",F.col("points"))).alias("away_ppg")
-    )
+        F.avg(F.when(F.lower(F.col("home_away")) == "home", F.col("points"))).alias("home_ppg"),
+        F.avg(F.when(F.lower(F.col("home_away")) == "away", F.col("points"))).alias("away_ppg")
 )
 
 # METADATA ********************

@@ -98,7 +98,7 @@ gold_df = (
     )
     .withColumn(
         "close_game",
-        F.col("point_differential") <= 5
+        F.when(F.col("point_differential").isNotNull(), F.abs(F.col("point_differential")) <= 5).otherwise(False)
     )
 )
 

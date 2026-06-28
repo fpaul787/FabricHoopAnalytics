@@ -43,11 +43,9 @@ player_box_df.write \
 # Read data
 schedules_df = spark.read.parquet("Files/hoopr-nba-storage/schedules/parquet")
 
-# Write to bronze
-schedules_df.write \
-    .format("delta") \
-    .mode("overwrite") \
-    .saveAsTable("hoop_data.bronze_schedules")
+schedules_df = spark.read.parquet(
+    "Files/hoopr-nba-storage/schedules/parquet/nba_schedule_{200[0-9],201[0-9],202[0-6]}.parquet"
+)
 
 # METADATA ********************
 

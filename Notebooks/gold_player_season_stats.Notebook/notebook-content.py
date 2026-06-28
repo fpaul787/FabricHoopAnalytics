@@ -75,9 +75,8 @@ gold_df = (
         F.sum(F.when(F.col("team_winner"),1).otherwise(0)).alias("wins"),
         F.sum(F.when(~F.col("team_winner"),1).otherwise(0)).alias("losses"),
 
-        F.sum(F.when(F.col("home_away")=="home",1).otherwise(0)).alias("home_games"),
-        F.sum(F.when(F.col("home_away")=="away",1).otherwise(0)).alias("away_games"),
-
+        F.sum(F.when(F.lower(F.col("home_away")) == "home", 1).otherwise(0)).alias("home_games"),
+        F.sum(F.when(F.lower(F.col("home_away")) == "away", 1).otherwise(0)).alias("away_games"),
         F.sum("minutes").alias("total_minutes"),
         F.sum("points").alias("total_points"),
         F.sum("rebounds").alias("total_rebounds"),

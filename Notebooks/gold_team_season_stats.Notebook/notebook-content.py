@@ -26,8 +26,7 @@
 # 
 # Creates `hoop_data.gold_team_season_stats` from `hoop_data.silver_team_box`.
 # 
-# **Grain:** One row per team per season.
-
+# **Grain:** One row per team per season per season type.
 
 # CELL ********************
 

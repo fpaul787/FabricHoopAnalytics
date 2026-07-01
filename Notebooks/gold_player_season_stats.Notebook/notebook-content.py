@@ -26,7 +26,8 @@
 # 
 # Creates an analytics-ready player season table from `hoop_data.silver_player_box`.
 # 
-# **Grain:** One row per player per team per season.
+# **Grain:** One row per player per team per season
+
 # CELL ********************
 
 from pyspark.sql import functions as F
@@ -107,7 +108,7 @@ gold_df = (
 
         F.avg(F.when(F.lower(F.col("home_away")) == "home", F.col("points"))).alias("home_ppg"),
         F.avg(F.when(F.lower(F.col("home_away")) == "away", F.col("points"))).alias("away_ppg")
-)
+))
 
 # METADATA ********************
 
